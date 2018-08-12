@@ -1,0 +1,19 @@
+* printing tips in java with some intellJ IDE specific shortcuts:
+    - "sout" is the shortcut for "System.out.println();" statement.
+    - you can use "Arrays.toString(yourArray);" to directly print arrays instead of writing a loop.
+        - for multi-dimensional arrays, you can use the method: "deepToString(yourArray)" of the same "Arrays" class.
+    - in order to print an array, put the name of the array followed by .sout then hit 'Enter'.
+
+* When reading from input using ".nextInt()" method then decided to use another method ".nextLine()" you, most probably,
+  have to be sure to flush the input stream using ".next();" or ".nextLine();"
+
+* Sometimes you need to check against empty lines. "String line = scanner.nextLine(); while(line.trim().isEmpty()" is
+  the solution to do that.
+
+* If you want to make your life more easy wit arrays' loops, you can write the name of the array followed by a dot and
+  'for'. a dropdown menu will be displayed. You may choose your loop of interest and hit 'enter'.
+
+* More often, you may need to compare two arrays lexicographically. The method compare(arr1, arr2) of Arrays class will
+  be in hand in such cases. You may need to sort your arrays first.
+
+* Collections.reverse(), as it is named, is the array reversing method.
