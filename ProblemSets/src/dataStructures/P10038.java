@@ -5,7 +5,6 @@ import java.util.*;
 public class P10038 {
     public static void main(String[] args) {
         Scanner c = new Scanner(System.in);
-        boolean stop = false;
         while (c.hasNextInt()) {
             int n = c.nextInt();
             int[] numbers = new int[n];

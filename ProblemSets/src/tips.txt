@@ -17,3 +17,5 @@
   be in hand in such cases. You may need to sort your arrays first.
 
 * Collections.reverse(), as it is named, is the array reversing method.
+
+* Avoid, as much as possible, the use of complicated classes in java to not face TLE judge message.

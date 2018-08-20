@@ -1,20 +1,35 @@
+package gettingStarted;
+
 import java.util.Scanner;
 
 public class P100 {
     public static void main(String [] args){
         Scanner c = new Scanner(System.in);
-        int i = c.nextInt();
-        int j = c.nextInt();
-        int max = getSeqCount(i);
-        for(int k = i; k<=j; k++){
-            int count = getSeqCount(k);
-            if(count>max)
-                max = count;
+        while(c.hasNextLine()) {
+            int firstInput = c.nextInt();
+            int secondInput = c.nextInt();
+            int i;
+            int j;
+            if(firstInput>secondInput){
+                j = firstInput;
+                i = secondInput;
+            }
+            else{
+                i = firstInput;
+                j = secondInput;
+            }
+            int max = getSeqCount(i);
+            for (int k = i; k <= j; k++) {
+                int count = getSeqCount(k);
+                if (count > max)
+                    max = count;
+            }
+            System.out.println(firstInput + " " + secondInput+ " " + max);
+            c.nextLine();
         }
-        System.out.println(i+" "+j+" "+max);
     }
 
-    public static int getSeqCount(int n){
+    private static int getSeqCount(int n){
         int count = 0;
         while(n>1){
             count++;

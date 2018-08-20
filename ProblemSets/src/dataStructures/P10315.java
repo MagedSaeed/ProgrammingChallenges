@@ -155,18 +155,18 @@ public class P10315 {
     }
 
 
-    static boolean isPair(Integer[] cards) {
+    private static boolean isPair(Integer[] cards) {
         for (int i = 0; i < cards.length - 1; i++)
             if (cards[i].equals(cards[i + 1]))
                 return true;
         return false;
     }
 
-    static boolean isTwoPair(Integer[] cards) {
+    private static boolean isTwoPair(Integer[] cards) {
         return new HashSet<>(Arrays.asList(cards)).size() == 3 && !isThreeOfKind(cards);
     }
 
-    static boolean isThreeOfKind(Integer[] cards) {
+    private static boolean isThreeOfKind(Integer[] cards) {
         List<Integer> cardsList = Arrays.asList(cards);
         for (Integer value : cards)
             if (Collections.frequency(cardsList, value) == 3)
@@ -174,37 +174,37 @@ public class P10315 {
         return false;
     }
 
-     static boolean isStraight(Integer[] cards) {
+     private static boolean isStraight(Integer[] cards) {
         for (int i = 0; i < cards.length - 1; i++)
             if (cards[i + 1] != cards[i] + 1)
                 return false;
         return true;
     }
 
-     static boolean isFlush(Character[] suits) {
+     private static boolean isFlush(Character[] suits) {
         return new HashSet<>(Arrays.asList(suits)).size() == 1;
     }
 
-     static boolean isFullHouse(Integer[] cards) {
+     private static boolean isFullHouse(Integer[] cards) {
         return new HashSet<>(Arrays.asList(cards)).size() == 2 && isThreeOfKind(cards);
 
     }
 
-     static boolean isFourKind(Integer[] cards) {
+     private static boolean isFourKind(Integer[] cards) {
         return new HashSet<>(Arrays.asList(cards)).size() == 2 && !isThreeOfKind(cards);
     }
 
-     static boolean isStraightFlush(Integer[] cards, Character[] suits) {
+     private static boolean isStraightFlush(Integer[] cards, Character[] suits) {
         return isFlush(suits) && isStraight(cards);
     }
 
-     static int compareHighCard(Integer[] blackCards, Integer[] whiteCards) {
+     private static int compareHighCard(Integer[] blackCards, Integer[] whiteCards) {
         blackCards = reverseArray(blackCards);
         whiteCards = reverseArray(whiteCards);
         return compareArrays(blackCards, whiteCards);
     }
 
-     static int comparePair(Integer[] l1, Integer[] l2) {
+     private static int comparePair(Integer[] l1, Integer[] l2) {
         // size of the two lists should be identical.
         int l1Pair = 0;
         int l2Pair = 0;
@@ -242,7 +242,7 @@ public class P10315 {
         }
     }
 
-     static int compareTwoPairs(Integer[] l1, Integer[] l2) {
+     private static int compareTwoPairs(Integer[] l1, Integer[] l2) {
 //        System.out.println(Arrays.toString(l1));
 //        System.out.println(Arrays.toString(l2));
         ArrayList<Integer> l1List = new ArrayList<>(Arrays.asList(l1));
@@ -283,7 +283,7 @@ public class P10315 {
 
     }
 
-     static int compareThreeOfKind(Integer[] blackCards, Integer[] whiteCards) {
+     private static int compareThreeOfKind(Integer[] blackCards, Integer[] whiteCards) {
         int blackVal = 0;
         int whiteVal = 0;
         for (Integer value : blackCards) {
@@ -301,11 +301,11 @@ public class P10315 {
         return Integer.compare(blackVal, whiteVal);
     }
 
-     static int compareStraight(Integer[] blackCards, Integer[] whiteCards) {
+     private static int compareStraight(Integer[] blackCards, Integer[] whiteCards) {
         return Integer.compare(blackCards[4], whiteCards[4]);
     }
 
-     static int compareFourKind(Integer[] blackCards, Integer[] whiteCards) {
+     private static int compareFourKind(Integer[] blackCards, Integer[] whiteCards) {
         int blackVal = 0;
         for (Integer value : blackCards) {
             if (Collections.frequency(Arrays.asList(blackCards), value) == 4) {
@@ -324,13 +324,13 @@ public class P10315 {
         return Integer.compare(blackVal, whiteVal);
     }
 
-     static Integer[] reverseArray(Integer[] array) {
+     private static Integer[] reverseArray(Integer[] array) {
         List<Integer> arrayList = Arrays.asList(array);
         Collections.reverse(arrayList);
         return arrayList.toArray(array);
     }
 
-     static int compareArrays(Integer[] arr1, Integer[] arr2) {
+     private static int compareArrays(Integer[] arr1, Integer[] arr2) {
         for (int i = 0; i < arr1.length; i++)
             if (arr1[i] > arr2[i])
                 return 1;
@@ -339,7 +339,7 @@ public class P10315 {
         return 0;
     }
 
-     static int compareArrayLists(ArrayList<Integer> list1, ArrayList<Integer> list2) {
+     private static int compareArrayLists(ArrayList<Integer> list1, ArrayList<Integer> list2) {
         // size of the lists shall be identical
         Collections.sort(list1);
         Collections.sort(list2);
