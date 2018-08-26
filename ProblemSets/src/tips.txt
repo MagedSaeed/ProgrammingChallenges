@@ -19,3 +19,5 @@
 * Collections.reverse(), as it is named, is the array reversing method.
 
 * Avoid, as much as possible, the use of complicated classes in java to not face TLE judge message.
+
+* Be careful when taking input from the command line.

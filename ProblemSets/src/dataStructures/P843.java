@@ -4,28 +4,47 @@ import java.util.*;
 
 public class P843 {
     public static void main(String[] args) {
+
         Scanner c = new Scanner(System.in);
         int dictionarySize = c.nextInt();
+
+        // this line is to flush out the input stream
         c.nextLine();
 
         // get the dictionary from the input stream:
         String[] words = new String[dictionarySize];
-        for (int i = 0; i < words.length; i++)
+        for (int i = 0; i < words.length; i++) {
             words[i] = c.nextLine();
+            // remove white spaces surrounding dictionary words if there is any
+            words[i] = words[i].trim();
+        }
+
         // get encrypted input
-        String line = c.nextLine();
+        String line;
         while (c.hasNextLine()) {
+            line = c.nextLine();
+            if (line.length() == 0) {
+                System.out.println();
+                continue;
+            }
+
+            // remove whitespaces
             String[] eWords = line.split(" ");
+            for (int i = 0; i < eWords.length; i++) {
+                eWords[i] = eWords[i].trim();
+            }
+
+            // decrypt words:
             String[] dWords = decryptWords(eWords, words);
-            for (int i = 0; i < dWords.length; i++)
+
+            // print the decrypted line
+            for (int i = 0; i < dWords.length; i++) {
                 if (i != dWords.length - 1) {
                     System.out.print(dWords[i] + " ");
                 } else {
                     System.out.println(dWords[i]);
                 }
-            line = c.nextLine();
-            if (line.trim().length() == 0)
-                System.exit(0);
+            }
         }
 
     }
@@ -36,6 +55,7 @@ public class P843 {
 
         // get copy of the dWords so that the original version not destroyed
         String[] eWordsCopy = Arrays.copyOf(eWords, eWords.length);
+
         // sort by length from the greatest to the smallest
         Arrays.sort(eWordsCopy, new Comparator<String>() {
             @Override
@@ -45,96 +65,97 @@ public class P843 {
         });
 
         // initialize a key array to hold decrypted letters:
-        char[][] keyArray = new char[2][26];
+        // for example: 'a' would be mapped to keyArray[0] and 'z' would be mapped to keyArray[25]
+        char[] keyArray = new char[26];
         for (int i = 0; i < 26; i++) {
-            keyArray[0][i] = (char) ('a' + i);
-            keyArray[1][i] = '*';
+            // initialize the keyArray to '*'
+            keyArray[i] = '*';
         }
 
 
         // restore keyArray original values if there is no solution to all words
-        if (!matchWords(words, eWordsCopy, keyArray))
+        if (!matchWords(words, eWordsCopy, keyArray)) {
             for (int i = 0; i < 26; i++) {
-                keyArray[0][i] = (char) ('a' + i);
-                keyArray[1][i] = '*';
+                keyArray[i] = '*';
             }
+        }
+
+        // decrypt line using the mapping stored in keyArray
         for (int i = 0; i < eWords.length; i++) {
             StringBuilder temp = new StringBuilder();
-            for (int j = 0; j < eWords[i].length(); j++)
-                temp.append(keyArray[1][eWords[i].charAt(j) - 97]);
+            for (int j = 0; j < eWords[i].length(); j++) {
+                temp.append(keyArray[eWords[i].charAt(j) - 97]);
+            }
             dWords[i] = temp.toString();
         }
         return dWords;
     }
 
-    private static boolean matchWords(String[] words, String[] eWords, char[][] keyArray) {
+    private static boolean matchWords(String[] words, String[] eWords, char[] keyArray) {
         ArrayList<String> promisingWords = new ArrayList<>();
         String eWord = eWords[0];
-        // this is an array of booleans to check whether a letter got updated. This array is useful in the backtracking
-        // step where we remove a word from the keyArray
-        boolean[] updatePattern = new boolean[eWord.length()];
+
+        // store the current state of keyArray
+        char[] originalKeyArray = new char[26];
+        System.arraycopy(keyArray, 0, originalKeyArray, 0, originalKeyArray.length);
+
         // get promising words that may match
-        for (String word : words)
+        for (String word : words) {
             if (word.length() == eWord.length()
-                    && wordPattern(word).equals(wordPattern(eWord)))
+                    && wordPattern(word).equals(wordPattern(eWord))) {
                 promisingWords.add(word);
+            }
+        }
 
         for (String word : promisingWords) {
-            if (mapWord(eWord, word, keyArray, updatePattern)) {
+            if (mapWord(eWord, word, keyArray)) {
                 if (eWords.length > 1) {
                     // recursive call:
                     if (matchWords(words, Arrays.copyOfRange(eWords, 1, eWords.length), keyArray))
                         return true;
                     else {
-                        // remove the word from the dictionary to try another one
-                        for (int i = 0; i < eWord.length(); i++)
-                            if (keyArray[1][eWord.charAt(i) - 97] == word.charAt(i) && updatePattern[i])
-                                keyArray[1][eWord.charAt(i) - 97] = '*';
+                        // remove the word from the dictionary [by restoring the keyArray original values]
+                        // and try another one
+                        System.arraycopy(originalKeyArray, 0, keyArray, 0, keyArray.length);
                     }
-                }
-                // if there are now decrypted words, then return true
-                else
+                } else // if there is no more decrypted words, then return true
                     return true;
             }
         }
-        // if there is no word mapped, then return false
+        // if there is no suitable mapping, return false
         return false;
     }
 
-    private static boolean mapWord(String eWord, String word, char[][] keyArray, boolean[] updatePattern) {
+    private static boolean mapWord(String eWord, String word, char[] keyArray) {
+        // store the current state of keyArray
+        char[] originalKeyArray = new char[26];
+        System.arraycopy(keyArray, 0, originalKeyArray, 0, keyArray.length);
+
         // check one-to-one from the decrypted word to the dictionary word:
-        for (int i = 0; i < eWord.length(); i++)
-            if (keyArray[1][eWord.charAt(i) - 97] != word.charAt(i)
-                    && keyArray[1][eWord.charAt(i) - 97] != '*')
+        for (int i = 0; i < eWord.length(); i++) {
+            if ((keyArray[eWord.charAt(i) - 97] != word.charAt(i)
+                    && keyArray[eWord.charAt(i) - 97] != '*')
+                    || !isLetterMapped(eWord.charAt(i), word.charAt(i), keyArray)) {
+                // restore original array back
+                System.arraycopy(originalKeyArray, 0, keyArray, 0, keyArray.length);
                 return false;
+            }
 
-        // check the other way around
-        for(int i=0; i<word.length(); i++)
-            if(!isLetterMapped(eWord.charAt(i), word.charAt(i), keyArray))
-                return false;
-
-        // update the key array:
-        for(int i=0; i<eWord.length(); i++) {
-            if (keyArray[1][eWord.charAt(i) - 97] == word.charAt(i))
-                updatePattern[i] = false;
+            // update the key array:
             else {
-                keyArray[1][eWord.charAt(i) - 97] = word.charAt(i);
-                updatePattern[i] = true;
+                keyArray[eWord.charAt(i) - 97] = word.charAt(i);
             }
         }
 
-//        System.out.println("eWord: " + eWord);
-//        System.out.println("word: " + word);
-//        System.out.println("this mapping is: " + isMapped);
-//        if (isMapped)
-//            for (char[] aKeyArray : keyArray) System.out.println(Arrays.toString(aKeyArray));
         return true;
     }
 
-    private static boolean isLetterMapped(char eLetter, char letter, char[][] keyArray) {
-        for (int i = 0; i < 26; i++)
-            if (keyArray[1][i] == letter && keyArray[0][i] != eLetter)
+    private static boolean isLetterMapped(char eLetter, char letter, char[] keyArray) {
+        for (int i = 0; i < 26; i++) {
+            if (keyArray[i] == letter && i != (eLetter - 97)) {
                 return false;
+            }
+        }
         return true;
     }
 
@@ -144,18 +165,24 @@ public class P843 {
             StringBuilder mapped = new StringBuilder();
             int count = 0;
             HashMap<Character, Character> mapping = new HashMap<>();
-            for (int i = 0; i < word.length(); i++)
-                if (!mapping.containsKey(word.charAt(i)))
+            for (int i = 0; i < word.length(); i++) {
+                if (!mapping.containsKey(word.charAt(i))) {
                     mapping.put(word.charAt(i), (char) (48 + count++));
-            for (int i = 0; i < word.length(); i++)
+                }
+            }
+            for (int i = 0; i < word.length(); i++) {
                 mapped.append(mapping.get(word.charAt(i)));
+            }
             return mapped.toString();
+
         } else {
             return "";
         }
     }
 }
 
+
+// previous non working try with TLE.
 
 //public class P843 {
 //    public static void main(String[] args) {
