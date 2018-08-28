@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67c3c048-8efe-4641-aa58-1b0818d35d27" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/dataStructures/P10205.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dataStructures/testcases/P10205.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dataStructures/P843.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dataStructures/P843.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dataStructures/testcases/P843" beforeDir="false" afterPath="$PROJECT_DIR$/src/dataStructures/testcases/P843" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tips.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/tips.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dataStructures/P10205.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dataStructures/P10205.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,10 +25,11 @@
     <session id="-398034461">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="8" />
+          <entry key="project.closed" value="9" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.23" value="1" />
           <entry key="project.open.time.35" value="1" />
@@ -39,71 +38,53 @@
           <entry key="project.open.time.43" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.57" value="1" />
-          <entry key="project.opened" value="11" />
+          <entry key="project.opened" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="P843" value="4" />
           <entry key="java" value="24" />
-          <entry key="txt" value="5" />
+          <entry key="txt" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JAVA" value="24" />
-          <entry key="PLAIN_TEXT" value="9" />
+          <entry key="PLAIN_TEXT" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="P843" value="39" />
-          <entry key="java" value="18995" />
-          <entry key="txt" value="534" />
+          <entry key="java" value="21053" />
+          <entry key="txt" value="662" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="18995" />
-          <entry key="PLAIN_TEXT" value="573" />
+          <entry key="JAVA" value="21053" />
+          <entry key="PLAIN_TEXT" value="701" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/dataStructures/P10205.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="370">
+              <caret line="52" column="16" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dataStructures/P843.java">
+        <entry file="file://$PROJECT_DIR$/src/dataStructures/testcases/P10205.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/dataStructures/testcases/P843">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1375">
-              <caret line="55" column="1" lean-forward="true" selection-start-line="55" selection-start-column="1" selection-end-line="55" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/tips.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="22" column="53" selection-start-line="22" selection-start-column="53" selection-end-line="22" selection-end-column="53" />
+            <state relative-caret-position="529">
+              <caret line="74" lean-forward="true" selection-end-line="74" />
             </state>
           </provider>
         </entry>
@@ -130,10 +111,11 @@
         <option value="$PROJECT_DIR$/src/dataStructures/P10038.java" />
         <option value="$PROJECT_DIR$/src/dataStructures/P843DataGenerator.java" />
         <option value="$PROJECT_DIR$/src/gettingStarted/P100.java" />
-        <option value="$PROJECT_DIR$/src/dataStructures/P10205.java" />
         <option value="$PROJECT_DIR$/src/dataStructures/testcases/P843" />
         <option value="$PROJECT_DIR$/src/tips.txt" />
         <option value="$PROJECT_DIR$/src/dataStructures/P843.java" />
+        <option value="$PROJECT_DIR$/src/dataStructures/testcases/P10205.txt" />
+        <option value="$PROJECT_DIR$/src/dataStructures/P10205.java" />
       </list>
     </option>
   </component>
@@ -155,8 +137,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -175,17 +155,26 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="dataStructures" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="ProblemSets" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProblemSets" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="dataStructures" type="462c0819:PsiDirectoryNode" />
+              <item name="testcases" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1535218738462" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1535477738108" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -207,7 +196,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.P843">
+  <component name="RunManager" selected="Application.P10205">
     <configuration name="Extras" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Extras" />
       <module name="ProblemSets" />
@@ -228,8 +217,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="P10050" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="dataStructures.P10050" />
+    <configuration name="P10205" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dataStructures.P10205" />
       <module name="ProblemSets" />
       <extension name="coverage">
         <pattern>
@@ -268,19 +257,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.P10050" />
       <item itemvalue="Application.Extras" />
       <item itemvalue="Application.P843" />
       <item itemvalue="Application.P843DataGenerator" />
       <item itemvalue="Application.P100" />
+      <item itemvalue="Application.P10205" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.P10205" />
         <item itemvalue="Application.P843" />
         <item itemvalue="Application.P100" />
         <item itemvalue="Application.P843DataGenerator" />
         <item itemvalue="Application.Extras" />
-        <item itemvalue="Application.P10050" />
       </list>
     </recent_temporary>
   </component>
@@ -304,7 +293,8 @@
       <workItem from="1534887244232" duration="4516000" />
       <workItem from="1535123050235" duration="45000" />
       <workItem from="1535123290458" duration="5524000" />
-      <workItem from="1535292383916" duration="643000" />
+      <workItem from="1535292383916" duration="4524000" />
+      <workItem from="1535462799975" duration="4937000" />
     </task>
     <task id="LOCAL-00001" summary="- Problem 10050 &quot;hartals problem&quot; is accepted.&#10;- test cases folder is added.">
       <created>1534243231248</created>
@@ -320,17 +310,24 @@
       <option name="project" value="LOCAL" />
       <updated>1534807342835</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="- Problem 843 &quot;Crypt Kicker Problem&quot; is accepted.&#10;- Test cases are added.&#10;- Special problem generator class is added for this problem.">
+      <created>1535293320407</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1535293320407</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120797000" />
+    <option name="totallyTimeSpent" value="129615000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.11673774" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.117803834" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -339,7 +336,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3056133" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3056133" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.37006238" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -370,7 +367,20 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="- Problem 10050 &quot;hartals problem&quot; is accepted.&#10;- test cases folder is added." />
     <MESSAGE value="- Problem 100 &quot;3n+1 Problem&quot; is accepted.&#10;- No test cases folder is added yet." />
-    <option name="LAST_COMMIT_MESSAGE" value="- Problem 100 &quot;3n+1 Problem&quot; is accepted.&#10;- No test cases folder is added yet." />
+    <MESSAGE value="- Problem 843 &quot;Crypt Kicker Problem&quot; is accepted.&#10;- Test cases are added.&#10;- Special problem generator class is added for this problem." />
+    <option name="LAST_COMMIT_MESSAGE" value="- Problem 843 &quot;Crypt Kicker Problem&quot; is accepted.&#10;- Test cases are added.&#10;- Special problem generator class is added for this problem." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/dataStructures/P10205.java</url>
+          <line>37</line>
+          <properties />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/dataStructures/testcases/P10050.txt">
@@ -439,17 +449,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dataStructures/P10205.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/tips.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="550">
           <caret line="22" column="53" selection-start-line="22" selection-start-column="53" selection-end-line="22" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dataStructures/testcases/P843">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="16" column="6" lean-forward="true" selection-end-line="82" />
         </state>
       </provider>
     </entry>
@@ -460,10 +470,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dataStructures/testcases/P843">
+    <entry file="file://$PROJECT_DIR$/src/dataStructures/testcases/P10205.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1375">
-          <caret line="55" column="1" lean-forward="true" selection-start-line="55" selection-start-column="1" selection-end-line="55" selection-end-column="1" />
+        <state relative-caret-position="529">
+          <caret line="74" lean-forward="true" selection-end-line="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dataStructures/P10205.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="52" column="16" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
         </state>
       </provider>
     </entry>
