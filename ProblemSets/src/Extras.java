@@ -25,6 +25,13 @@ public class Extras {
 //        System.out.println(wordPattern("mama"));
         Integer [] newArray = Arrays.copyOfRange(numbers, 2, numbers.length);
         System.out.println(Arrays.toString(newArray));
+
+        String mystr = "Smith, M.N., Martin, G., Erdos, P.";
+        System.out.println(Arrays.toString(mystr.split("\\.,")));
+
+        int cases = 5;
+        while(cases-->0)
+            System.out.println(cases);
     }
 
     //    private static void matchWord(HashMap<Character, Character> keyArray, String[] words, String[] encryptedText, int index) {
