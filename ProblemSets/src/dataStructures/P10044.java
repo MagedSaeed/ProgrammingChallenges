@@ -66,7 +66,7 @@ public class P10044 {
             for (int i = 0; i < n; i++)
                 testingNames[i] = c.nextLine();
 
-            calculateEnums("Erdos, P.", graph, eNums);
+            calculateEnums(graph, eNums);
 
 
             System.out.println("Scenario " + currentCase);
@@ -80,11 +80,11 @@ public class P10044 {
 
     }
 
-    private static void calculateEnums(String name, HashMap<String, ArrayList<String>> graph,
+    private static void calculateEnums(HashMap<String, ArrayList<String>> graph,
                                        HashMap<String, Integer> eNums) {
 
         ArrayList<String> notCalculated = new ArrayList<>();
-        notCalculated.add(name);
+        notCalculated.add("Erdos, P.");
 
         while (notCalculated.size() > 0) {
             String currentName = notCalculated.get(0);
